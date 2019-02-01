@@ -1,18 +1,12 @@
 module.exports = {
-  up: (queryInterface, Sequelize) => queryInterface.createTable('booksWithRatings', {
+  up: (queryInterface, Sequelize) => queryInterface.createTable('books', {
     id: {
       allowNull: false,
       autoIncrement: true,
       primaryKey: true,
       type: Sequelize.INTEGER,
     },
-    author: {
-      type: Sequelize.STRING,
-    },
-    bookId: {
-      type: Sequelize.INTEGER,
-    },
-    bookName: {
+    name: {
       type: Sequelize.STRING,
     },
     rating: {
@@ -27,5 +21,6 @@ module.exports = {
       type: Sequelize.DATE,
     },
   }),
-  down: (queryInterface, Sequelize) => queryInterface.dropTable('booksWithRatings'),
+  // eslint-disable-next-line no-unused-vars
+  down: (queryInterface, Sequelize) => queryInterface.dropTable('books'),
 };
