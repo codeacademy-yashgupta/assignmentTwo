@@ -17,5 +17,5 @@ module.exports = async (req, res) => {
   resp.data.books.forEach(async (element) => {
     await Model.book.generate(element.id, element.Name, element.rating);
   });
-  return res.response('Inserted into database').code(200);
+  return res.response('Inserted into database').code(201);
 };
