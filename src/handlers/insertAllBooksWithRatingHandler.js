@@ -15,7 +15,7 @@ module.exports = async (req, res) => {
   await appendRatingWithBooks();
   // eslint-disable-next-line prefer-destructuring
   resp.data.books.forEach(async (element) => {
-    await Model.book.generate(element.Name, element.rating);
+    await Model.book.generate(element.id, element.Name, element.rating);
   });
   return res.response('Inserted into database').code(200);
 };

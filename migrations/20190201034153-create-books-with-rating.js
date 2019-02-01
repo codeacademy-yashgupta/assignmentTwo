@@ -6,11 +6,20 @@ module.exports = {
       primaryKey: true,
       type: Sequelize.INTEGER,
     },
+    bookId: {
+      type: Sequelize.INTEGER,
+    },
+    author: {
+      type: Sequelize.STRING,
+    },
     name: {
       type: Sequelize.STRING,
     },
     rating: {
       type: Sequelize.DECIMAL,
+    },
+    like: {
+      type: Sequelize.BOOLEAN,
     },
     createdAt: {
       allowNull: false,
